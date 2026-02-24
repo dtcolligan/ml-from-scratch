@@ -1,2 +1,2 @@
-# introductoryai
-This will be a repository dedicated to introductory AI projects
+# Introductory AI
+My AI learning journey — Imperial EFDS, Year 1.
