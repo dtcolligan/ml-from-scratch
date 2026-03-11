@@ -1,5 +1,3 @@
-print("Hello world")
-
 import random
 
 # The Value class - autograd engine
@@ -162,37 +160,3 @@ print("\nFinal predictions:")
 for x, y in zip(xs, ys):
     pred = model(x)
     print(f"  Target: {y}, Predicted: {pred.data:.4f}")
-
-import matplotlib.pyplot as plt
-
-lr = 0.1 / (1 + 0.01 * i)
-
-model = MLP(3, [4, 4, 1])
-losses = []
-
-for i in range(100):
-    predictions = [model(x) for x in xs]
-    loss = sum((pred - y) ** 2 for pred, y in zip(predictions, ys))
-    losses.append(loss.data)
-
-    for p in model.parameters():
-        p.grad = 0
-    loss.backward()
-    for p in model.parameters():
-        p.data -= lr * p.grad
-# Loss curve
-plt.figure(figsize=(10, 4))
-plt.plot(losses)
-plt.xlabel('Step')
-plt.ylabel('Loss')
-plt.title('Loss Curve')
-plt.show()
-
-# Final predictions vs targets
-preds = [model(x).data for x in xs]
-plt.figure(figsize=(6, 4))
-plt.bar(range(4), ys, alpha=0.5, label='Target')
-plt.bar(range(4), preds, alpha=0.5, label='Predicted')
-plt.legend()
-plt.title('Predictions vs Targets')
-plt.show()
