@@ -33,3 +33,6 @@ Thumbs.db
 *.pkl
 *.h5
 !**/example_*.csv
+
+# MNIST dataset (downloaded automatically)
+data/
