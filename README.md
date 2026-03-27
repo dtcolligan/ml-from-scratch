@@ -30,6 +30,7 @@ This repo is designed to show:
 | 03 | Linear regression | Complete | MSE loss, analytical gradients, GD training loop, and closed-form comparison |
 | 04 | Micrograd | Complete | Reverse-mode autograd, computation graphs, backpropagation, and a small neural net |
 | 05 | MNIST MLP | Complete | End-to-end neural network training in PyTorch with ~96% accuracy |
+| 06 | Char-level LM | Complete | Next-character prediction, autoregressive generation, and the bridge into language modelling |
 
 ## Project structure
 
@@ -39,6 +40,7 @@ This repo is designed to show:
 03-linear-regression/ Linear regression with analytical gradients and diagnostics
 04-micrograd/         Minimal autograd engine + small neural network
 05-mnist-mlp/         PyTorch MLP on MNIST
+06-char-level-lm/     Character-level language modelling and autoregressive text generation
 ```
 
 ## Quickstart
@@ -80,12 +82,15 @@ For portfolio purposes, the strongest signal is that the work moves from:
 - Linear regression
 - Micrograd-style autograd engine
 - MNIST MLP
+- Character-level language model
 
 ### Next likely extensions
-- makemore / character-level language modelling
+- MLP-based next-character model
+- makemore-style progression beyond bigrams
 - transformer fundamentals
-- additional from-scratch deep learning components
 
 ## Notes
 
 The goal of this repo is depth, not breadth. Each section is intended to make the mechanics of machine learning more legible by implementing them directly.
+
+The latest addition extends the repo into sequence modelling, so the progression now reaches beyond classification and into the basic mechanics of language models.
